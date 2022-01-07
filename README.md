@@ -51,7 +51,7 @@ Then - coming up with a validation code for JS. Here I went with hard-coded noti
 
 ### What I learned
 
-There are different ways on how to implement validation. I tried to go declarative, rather than imperative, in my code as much as possible. The code could still probably be improved (perhaps by not hard-coding notifications in the HTML, however, I chose to do so because they provide for nice ARIA descriptions even when hidden, by using `aria-describedby` on inputs pointing to notifications).
+There are different ways on how to implement validation. I tried to go declarative, rather than imperative, in my code as much as possible. The code could still probably be improved (perhaps by not hard-coding notifications in the HTML and *toggle-revealing* them, but dynamically adding them).
 
 ### Continued development
 
