@@ -27,7 +27,7 @@
         <p class="notice">
           <span class="bold">Try it free 7 days</span> then $20/mo. thereafter
         </p>
-        <form class="form">
+        <form class="form js-form" novalidate>
           <div class="form__group">
             <div class="input-block">
               <input
@@ -35,8 +35,13 @@
                 type="text"
                 placeholder="First Name"
                 aria-label="First Name"
+                aria-describedby="first-name-description"
+                name="first-name"
               />
             </div>
+            <p id="first-name-description" class="form__notification">
+              First Name cannot be empty
+            </p>
           </div>
           <div class="form__group">
             <div class="input-block">
@@ -45,8 +50,13 @@
                 type="text"
                 placeholder="Last Name"
                 aria-label="Last Name"
+                aria-describedby="last-name-description"
+                name="last-name"
               />
             </div>
+            <p id="last-name-description" class="form__notification">
+              Last Name cannot be empty
+            </p>
           </div>
           <div class="form__group">
             <div class="input-block">
@@ -55,8 +65,16 @@
                 type="email"
                 placeholder="Email Address"
                 aria-label="Email Address"
+                aria-describedby="email-description"
+                name="email"
               />
             </div>
+            <p id="email-description" class="form__notification">
+              Email cannot be empty
+            </p>
+            <p class="form__notification form__notification--email">
+              Looks like this is not an email
+            </p>
           </div>
           <div class="form__group">
             <div class="input-block">
@@ -65,11 +83,20 @@
                 type="password"
                 placeholder="Password"
                 aria-label="Password"
+                name="password"
               />
             </div>
+            <p id="password-description" class="form__notification">
+              Password cannot be empty
+            </p>
           </div>
-          <button class="button" type="submit" aria-describedby="terms">
-            Claim you free trial
+          <button
+            class="button"
+            type="submit"
+            aria-describedby="terms"
+            name="submit"
+          >
+            Claim your free trial
           </button>
           <p class="terms" id="terms">
             By clicking the button, you are agreeing to our
@@ -89,5 +116,6 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </p>
     </footer>
+    <script src="./script.js" type="module"></script>
   </body>
 </html>
