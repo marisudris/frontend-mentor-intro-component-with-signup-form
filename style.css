@@ -79,19 +79,24 @@ body {
 
 .title {
   font-size: 1.7rem;
-  line-height: 1.25;
+  line-height: 1.1;
   margin-bottom: 1em;
 }
 
 @media (min-width: 768px) {
   .title {
-    font-size: 3.375rem;
+    font-size: 3rem;
     margin-bottom: 0.5em;
   }
 
   .main {
     margin-left: 0.75em;
   }
+}
+
+.header__byline {
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .notice {
@@ -116,7 +121,7 @@ body {
 
 @media (min-width: 768px) {
   .form {
-    gap: 1.5em;
+    gap: 1.3em;
     padding: 2.5em 2.5em 2.75em;
   }
 }
@@ -187,6 +192,7 @@ body {
 }
 
 .form__notification {
+  display: none;
   color: var(--clr-red);
   font-size: 0.7rem;
   font-style: italic;
@@ -194,12 +200,16 @@ body {
   margin-top: 0.5em;
 }
 
+.form__notification--visible {
+  display: block;
+}
+
 .button {
   color: white;
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
   font-weight: bold;
-  padding: 1.5em 0 1.25em;
+  padding: 1.25em 0 1em;
   background: var(--clr-green);
   border: none;
   border-radius: var(--border-radius-md);
